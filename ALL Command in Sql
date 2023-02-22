@@ -1,0 +1,13 @@
+// Use create, alter, rename, drop.
+create table Student
+(
+  id int,
+  name varchar(5),
+  college varchar(10)
+);
+alter table Student add location varchar(15);
+alter table Student drop column location;
+alter table Student rename column id to roll_no;
+alter table Student rename to vishal;
+drop table vishal;
+desc vishal;
