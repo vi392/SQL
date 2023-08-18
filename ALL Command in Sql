@@ -5,9 +5,41 @@ create table Student
   name varchar(5),
   college varchar(10)
 );
+desc Student;
 alter table Student add location varchar(15);
 alter table Student drop column location;
 alter table Student rename column id to roll_no;
 alter table Student rename to vishal;
 drop table vishal;
 desc vishal;
+
+// new code 
+show databases;
+use mysql;
+  create table emp(
+  emp_id int not null,
+  name varchar(30),
+  salary int (30),
+  city varchar(40),
+  unique(name),
+  primary key(emp_id)
+  );
+select * from emp;
+desc emp; 
+alter table emp add column Age int check(Age>=18);
+insert into emp values(5, 'shyam', 208, 'ludh', 28);
+update  emp set age=22 where emp_id=5;
+select max(salary), name,city from emp;
+select name from emp where salary<(select max(salary) from emp);
+delete from emp where emp_id=3;
+truncate table emp;
+select count(salary) from emp;
+select distinct age from emp;
+update emp set  name='rahul',salary=215,city='patna',age=25 where emp_id=3;
+select avg(salary) from emp;
+select sum(salary) from emp;
+
+-- second table
+
+create table stdu( roll_no int(30),name varchar(30),dept varchar(30),adrr varchar(30));
+desc stdu;
